@@ -20,7 +20,7 @@ class CreateBenefitsTable extends Migration
             $table->string('image_url');
             $table->string('place');
             $table->date('due_date');
-            $table->string('qr_file');
+//            $table->string('qr_file'); es del canjeo
             $table->integer('points')->unsigned();
             $table->timestamps();
             
