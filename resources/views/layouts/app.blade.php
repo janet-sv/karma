@@ -10,8 +10,10 @@
     <div class="content-container">
       @yield('content')
     </div>
+    <script src="{{ mix('/js/app.js') }}"></script>
+    <script src="{{ URL::asset('js/vendor.js') }}"></script>
+    @yield('javascript')
   </div>
 
-  <script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>
