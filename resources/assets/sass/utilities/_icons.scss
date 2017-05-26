@@ -5,3 +5,47 @@
   background-size: 100% 100%;
   vertical-align: middle;
 }
+
+.icon-home {
+  @extend %icon;
+  background-image: url('../../icons/home.svg');
+  height: 25px;
+  width: 25px;
+
+  &.is-active {
+    background-image: url('../../icons/home-active.svg');
+  }
+}
+
+.icon-user {
+  @extend %icon;
+  background-image: url('../../icons/user.svg');
+  height: 25px;
+  width: 25px;
+
+  &.is-active {
+    background-image: url('../../icons/user-active.svg');
+  }
+}
+
+.icon-list-button {
+  @extend %icon;
+  background-image: url('../../icons/list-button.svg');
+  height: 25px;
+  width: 25px;
+
+  &.is-active {
+    background-image: url('../../icons/list-button-active.svg');
+  }
+}
+
+.icon-happy-face {
+  @extend %icon;
+  background-image: url('../../icons/happy-face.svg');
+  height: 25px;
+  width: 25px;
+
+  &.is-active {
+    background-image: url('../../icons/happy-face-active.svg');
+  }
+}

@@ -10,13 +10,14 @@
 
 @import "vendor/normalize";
 
-@import "commons/index";
+@import "commons/mixins";
+@import "commons/variables";
 
 @import "base/base";
-@import "base/typography";
 
 @import "utilities/helpers";
 @import "utilities/icons";
 
 @import "theme/theme";
 
+@import "layouts/sidebar";

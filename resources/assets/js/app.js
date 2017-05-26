@@ -24,9 +24,9 @@ const app = new Vue({
 });*/
 
 import Vue from 'vue';
-import Sidebar from './components/Sidebar/Sidebar';
+import Dashboard from './components/Dashboard/Dashboard';
 
 new Vue({
-  el: '#sidebar',
-  components: { Sidebar }
+  el: '#dashboard',
+  components: { Dashboard }
 });

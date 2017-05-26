@@ -18,9 +18,10 @@ $orange:            #f08224 !default;
 $purple:            #6e5494 !default;
 $red:               #da272c !default;
 $white:             #fff    !default;
-$black:             #222    !default;
-$primary-blue:      #1f97ae !default;
-$primary-gray:      #636b6f !default;
+$black:             #2e2e2e !default;
+$primary-pink:      #ff6d8a !default;
+$primary-blue:      #6d8aff !default;
+$primary-gray:      #d8d8d8 !default;
 
 /* Background colors */
 
@@ -57,15 +58,15 @@ $font-weight-light: 300 !default;
 
 /* Body */
 
-$body-background-color: #f5f8fa;
-$body-color: $primary-gray;
+$body-background-color: #f8f8f9;
+$body-color: $black;
 $body-font: Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
 $body-font-size: 14px !default;
 $body-line-height: $lh-default !default;
 
 /* Sidebar */
 
-$sidebar-width: 260px;
+$sidebar-width: 300px;
 $sidebar-background-level-1: #222;
 $sidebar-background-level-2: #000;
 $sidebar-background-level-3: #000;

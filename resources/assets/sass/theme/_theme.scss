@@ -5,10 +5,12 @@
    ========================================================================== */
 
 .body-content {
+  display: flex;
 }
 
 .section {
 }
 
-.container {
+.content-container {
+  width: calc(100% - #{$sidebar-width});
 }

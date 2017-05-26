@@ -1,0 +1,75 @@
+.sidebar {
+  background-color: $white;
+  width: $sidebar-width;
+  height: 100vh;
+  border-right: 1px solid $primary-gray;
+}
+
+.sidebar-logo-wrapper {
+  padding: 35px 100px;
+  padding-bottom: 0;
+}
+
+.sidebar-welcome-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sidebar-welcome {
+  font-weight: 600;
+  font-size: 17px;
+  color: $primary-gray;
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.sidebar-welcome-photo-wrapper {
+  overflow: hidden;
+  background-color: $primary-gray;
+  border-radius: 130px;
+  height: 130px;
+  width: 130px;
+  margin: auto;
+}
+
+.sidebar-welcome-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sidebar-links {
+  padding: 0;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.sidebar-link {
+  width: 100%;
+  border-bottom: 1px solid $primary-gray;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 22px 30px;
+
+  &.is-active {
+    border-left: 8px solid $primary-pink;
+    padding-left: 22px;
+
+    .sidebar-link-text {
+      color: $black;
+    }
+  }
+}
+
+.sidebar-link-text {
+  color: $primary-gray;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 15px;
+}

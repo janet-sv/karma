@@ -5,10 +5,8 @@
   <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
 </head>
 <body>
-  <div class="container">
-    <div id="sidebar" class="sidebar-container">
-      <sidebar></sidebar>
-    </div>
+  <div class="body-content">
+    @include('layouts.sidebar')
     <div class="content-container">
       @yield('content')
     </div>

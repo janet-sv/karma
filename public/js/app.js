@@ -74,8 +74,8 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Sidebar_Sidebar__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Sidebar_Sidebar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Sidebar_Sidebar__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Dashboard_Dashboard__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Dashboard_Dashboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Dashboard_Dashboard__);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -105,8 +105,8 @@ const app = new Vue({
 
 
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-  el: '#sidebar',
-  components: { Sidebar: __WEBPACK_IMPORTED_MODULE_1__components_Sidebar_Sidebar___default.a }
+  el: '#dashboard',
+  components: { Dashboard: __WEBPACK_IMPORTED_MODULE_1__components_Dashboard_Dashboard___default.a }
 });
 
 /***/ }),
@@ -127,24 +127,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'sidebar'
+  name: 'dashboard'
 });
 
 /***/ }),
@@ -224,13 +209,13 @@ var Component = __webpack_require__(6)(
   /* template */
   __webpack_require__(7),
   /* scopeId */
-  "data-v-1b0d4e65",
+  "data-v-c19614d6",
   /* cssModules */
   null
 )
-Component.options.__file = "/home/vagrant/Code/ayura/resources/assets/js/components/Sidebar/Sidebar.vue"
+Component.options.__file = "/home/vagrant/Code/ayura/resources/assets/js/components/Dashboard/Dashboard.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Sidebar.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] Dashboard.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -239,9 +224,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-1b0d4e65", Component.options)
+    hotAPI.createRecord("data-v-c19614d6", Component.options)
   } else {
-    hotAPI.reload("data-v-1b0d4e65", Component.options)
+    hotAPI.reload("data-v-c19614d6", Component.options)
   }
 })()}
 
@@ -311,43 +296,14 @@ module.exports = function normalizeComponent (
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "sidebar"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('ul', {
-    staticClass: "sidebar-links"
-  }, [_c('a', {
-    attrs: {
-      "href": "#"
-    }
-  }, [_c('li', {
-    staticClass: "sidebar-link"
-  }, [_c('icon'), _vm._v(" "), _c('p', {
-    staticClass: "sidebar-link-text"
-  })], 1)])])])
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "sidebar-logo-wrapper"
-  }, [_c('img', {
-    attrs: {
-      "src": "",
-      "alt": "ayuda, oe logo"
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "sidebar-welcome-wrapper"
-  }, [_c('p', {
-    staticClass: "sidebar-welcome"
-  }), _vm._v(" "), _c('div', {
-    staticClass: "sidebar-welcome-photo-wrapper"
-  }), _vm._v(" "), _c('p', {
-    staticClass: "sidebar-welcome-name"
-  })])
-}]}
+    staticClass: "dashboard"
+  }, [_vm._v("\n  Dashboard\n")])
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-1b0d4e65", module.exports)
+     require("vue-hot-reload-api").rerender("data-v-c19614d6", module.exports)
   }
 }
 
@@ -362,13 +318,13 @@ var content = __webpack_require__(3);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(9)("7d55d153", content, false);
+var update = __webpack_require__(9)("27139fa6", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1b0d4e65\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Sidebar.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-1b0d4e65\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Sidebar.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-c19614d6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Dashboard.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-c19614d6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Dashboard.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });

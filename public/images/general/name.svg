@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="131px" height="23px" viewBox="0 0 131 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>name</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="bold" font-family="Jaldi-Bold, Jaldi" letter-spacing="1.5" font-size="36">
+        <g id="web/nav/side_menu" transform="translate(-116.000000, -950.000000)" fill="#FF6D8A">
+            <g id="side_menu">
+                <g id="name" transform="translate(111.000000, 928.000000)">
+                    <text id="app_name">
+                        <tspan x="28.3876953" y="44">KARMA</tspan>
+                    </text>
+                    <text id="+">
+                        <tspan x="4.99609375" y="41">+ </tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
