@@ -15,4 +15,5 @@ Route::get('/', function () {
 });
 
 Route::get('api/benefits', 'BenefitController@get');
+Route::get('api/campaings', 'CampaingController@get');
 
