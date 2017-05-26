@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('pages.home.home');
 });
+
+Route::group(['as' => 'campaings.', 'prefix' => 'campanas', 'namespace' => 'App'], function () {
+    Route::get('/', function () {
+        return view('pages.campaing.campaing');
+    });
+});
+
+Route::group(['as' => 'campaings.', 'prefix' => 'usuarios', 'namespace' => 'App'], function () {
+    Route::get('/', function () {
+        return view('pages.user.user');
+    });
+});
+
+
