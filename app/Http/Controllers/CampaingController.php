@@ -10,10 +10,6 @@ class CampaingController extends Controller
 {
     public function index()
     {
-    }
-
-    public function get()
-    {
         return Campaing::all();
     }
 }

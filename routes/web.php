@@ -13,7 +13,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('api/benefits', 'BenefitController@get');
-Route::get('api/campaings', 'CampaingController@get');
-

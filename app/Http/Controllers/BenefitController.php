@@ -10,10 +10,6 @@ class BenefitController extends Controller
 {
     public function index()
     {
-    }
-
-    public function get()
-    {
         return Benefit::all();
     }
 }
