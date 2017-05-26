@@ -3,16 +3,29 @@
   width: $sidebar-width;
   height: 100vh;
   border-right: 1px solid $primary-gray;
+  position: relative;
+
+   @include breakpoint(md) {
+    width: $sidebar-width-md;
+  }
 }
 
 .sidebar-logo-wrapper {
-  padding: 35px 100px;
+  padding: 35px 90px;
   padding-bottom: 0;
+
+  @include breakpoint(md) {
+    padding: 35px 70px;
+  }
 }
 
 .sidebar-welcome-wrapper {
   text-align: center;
   margin-bottom: 60px;
+
+  @include breakpoint(md) {
+    margin-bottom: 30px;
+  }
 }
 
 .sidebar-welcome {
@@ -22,6 +35,10 @@
   margin: 0;
   margin-top: 60px;
   margin-bottom: 10px;
+
+  @include breakpoint(md) {
+    margin-top: 15px;
+  }
 }
 
 .sidebar-welcome-photo-wrapper {
@@ -72,4 +89,12 @@
   font-weight: 600;
   margin: 0;
   margin-left: 15px;
+}
+
+.sidebar-name-wrapper {
+  padding: 35px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }

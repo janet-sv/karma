@@ -13,4 +13,8 @@
 
 .content-container {
   width: calc(100% - #{$sidebar-width});
+
+  @include breakpoint(md) {
+    width: calc(100% - #{$sidebar-width-md});
+  }
 }

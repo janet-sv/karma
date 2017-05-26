@@ -35,4 +35,7 @@
       </li>
     </a>
   </ul>
+  <div class="sidebar-name-wrapper">
+    <img src="{{ URL::asset('images/general/name.png')}}" alt="Ayuda, Oe logo">
+  </div>
 </div>
