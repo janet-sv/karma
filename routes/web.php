@@ -14,5 +14,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('api/benefits', 'BenefitController@list');
+Route::get('api/benefits', 'BenefitController@get');
 

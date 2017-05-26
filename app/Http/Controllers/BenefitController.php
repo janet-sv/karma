@@ -12,7 +12,7 @@ class BenefitController extends Controller
     {
     }
 
-    public function list()
+    public function get()
     {
         return Benefit::all();
     }

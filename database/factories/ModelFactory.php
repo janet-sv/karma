@@ -31,6 +31,6 @@ $factory->define(App\Models\Benefit::class, function (Faker\Generator $faker) {
         'due_date' => $faker->dateTimeThisYear(),
         'place' => $faker->text(15),
         'points' => $faker->numberBetween(10,99),
-        'qr_file' => url()->full().'/qr/qrimage.png',
+//        'qr_file' => url()->full().'/qr/qrimage.png',
     ];
 });
