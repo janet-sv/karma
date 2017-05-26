@@ -22,3 +22,15 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Models\Benefit::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->text(50),
+        'description' => $faker->paragraph(),
+        'image_url' => 'http://institutoavanzadodecolumna.es/wp-content/uploads/2016/06/image.jpeg',
+        'due_date' => $faker->dateTimeThisYear(),
+        'place' => $faker->text(15),
+        'points' => $faker->numberBetween(10,99),
+        'qr_file' => url()->full().'/qr/qrimage.png',
+    ];
+});
