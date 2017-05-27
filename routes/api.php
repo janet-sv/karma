@@ -22,15 +22,18 @@ Route::group(['prefix' => 'sessions'], function() {
     Route::post('/create', 'SessionController@create');
 });
 
-Route::group(['prefix' => 'benefits', 'middleware' => 'jwt.auth'], function() {
-    Route::get('/{benefit_id}', 'BenefitController@get');
-    Route::get('/created', 'BenefitController@created');
-    Route::get('/created/{benefit_id}', 'BenefitController@getCreated');
-    Route::post('redeem', 'BenefitController@redeem');
+Route::group(['prefix' => 'benefits'], function() {
+    Route::get('/', 'BenefitController@index');
+    Route::get('/get/{benefit_id}', 'BenefitController@get');
+
+    Route::get('/created', ['middleware' => 'jwt.auth', 'uses' => 'BenefitController@created']);
+    Route::get('/created/{benefit_id}', ['middleware' => 'jwt.auth', 'uses' => 'BenefitController@getCreated']);
+
+    Route::post('/redeem', ['middleware' => 'jwt.auth', 'uses' => 'BenefitController@redeem']);
 });
 
-Route::group(['prefix' => 'campaigns', 'middleware' => 'jwt.auth'], function() {
+Route::group(['prefix' => 'campaigns'], function() {
     Route::get('/', 'CampaignController@index');
     Route::get('/{campaign_id}', 'CampaignController@get');
-    Route::post('/validate', 'CampaignController@validateCampaing');
+    Route::post('/validate', ['middleware' => 'jwt.auth', 'uses' => 'CampaignController@validateCampaign']);
 });

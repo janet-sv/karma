@@ -23,7 +23,7 @@ Route::group(['as' => 'campaings', 'prefix' => 'campanas', 'namespace' => 'App']
     Route::get('/', function () {
         return view('pages.campaing.campaing');
     });
-    Route::post('generar', 'CampaingController@store');
+    Route::post('generar', 'CampaignController@store');
 });
 
 Route::group(['as' => 'users', 'prefix' => 'usuarios', 'namespace' => 'App'], function () {

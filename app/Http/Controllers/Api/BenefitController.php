@@ -5,16 +5,27 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+
 use App\Models\Benefit;
+use App\Models\User;
 use App\Models\ClientsBenefits;
 
 use Endroid\QrCode\QrCode;
 use Endroid\QrCode\Writer\PngWriter;
 use Endroid\QrCode\ErrorCorrectionLevel;
 
+use Auth;
+
 class BenefitController extends Controller
 {
-    public function get(Request $request, $benefit_id)
+    public function index()
+    {
+        $benefits = Benefit::all();
+
+        return $benefits;
+    }
+
+    public function get($benefit_id)
     {
         $benefit = Benefit::find($benefit_id);
 
@@ -23,8 +34,7 @@ class BenefitController extends Controller
 
     public function created()
     {
-        $user = $this->getApiCurrentUser();
-
+        $user = Auth::user();
         $benefits = $user->created_benefits()->with('benefit')->get()->toArray();
 
         return response()->json($benefits);

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\SessionCreateFormRequest;
+
 use App\Models\User;
 
 use JWTAuth;
@@ -19,13 +21,13 @@ class SessionController extends Controller
             if (!$user = JWTAuth::parseToken()->authenticate()) {
                 return response()->json(['user_not_found'], 404);
             }
-        } catch (Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
+        } catch (\Tymon\JWTAuth\Exceptions\TokenExpiredException $e) {
             return response()->json(['token_expired'], $e->getStatusCode());
 
-        } catch (Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
+        } catch (\Tymon\JWTAuth\Exceptions\TokenInvalidException $e) {
             return response()->json(['token_invalid'], $e->getStatusCode());
 
-        } catch (Tymon\JWTAuth\Exceptions\JWTException $e) {
+        } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
             return response()->json(['token_absent'], $e->getStatusCode());
         }
 
@@ -33,7 +35,7 @@ class SessionController extends Controller
         return response()->json(compact('user'));
     }
 
-    public function create(Request $request)
+    public function create(SessionCreateFormRequest $request)
     {
         $email = $request->get('email');
         $password = $request->get('password');
@@ -46,7 +48,7 @@ class SessionController extends Controller
 
         try {
             $token = JWTAuth::fromUser($user);
-        } catch (JWTException $e) {
+        } catch (\Tymon\JWTAuth\Exceptions\JWTException $e) {
             // something went wrong whilst attempting to encode the token
             return response()->json(['error' => 'could_not_create_token'], 500);
         }

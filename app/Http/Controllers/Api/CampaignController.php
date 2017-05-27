@@ -14,6 +14,8 @@ use Endroid\QrCode\ErrorCorrectionLevel;
 
 use Carbon\Carbon;
 
+use Auth;
+
 class CampaignController extends Controller
 {
     public function index()
@@ -35,11 +37,26 @@ class CampaignController extends Controller
         return response()->json($this->formatCampaign($campaign));
     }
 
-    public function validateCampaing()
+    public function validateCampaign()
     {   
-        $client_campaign = ClientsCampaings::where('code', request('code'))->update(['used' => 1]);
+        $client_campaign = ClientsCampaings::where('code', request('code'))->with('campaign')->first();
 
-        return ClientsCampaings::find($client_campaign);
+        $user = Auth::user();
+
+        if (!$client_campaign || $client_campaign->used) {
+            return response()->json(['status' => 'failed', 'points' => $user->points]);
+        }
+
+        $user->points = $user->points + $client_campaign->campaign->points;
+        $user->save();
+
+        $client_campaign->used = 1;
+        $client_campaign->save();
+
+        return response()->json([
+            'status' => 'success',
+            'points' => $user->points,
+        ]);
     }
 
     private function formatCampaign($campaign)

@@ -12,13 +12,13 @@ class ClientsCampaings extends Model
         'campaing_id', 'user_id'
     ];
 
-    public function campaing()
+    public function campaign()
     {
-        $this->belongsTo(Campaing::class);
+        return $this->belongsTo(Campaing::class, 'campaing_id', 'id');
     }
 
     public function User()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 }
