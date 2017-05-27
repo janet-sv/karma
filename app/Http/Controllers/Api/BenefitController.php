@@ -49,6 +49,16 @@ class BenefitController extends Controller
 
     public function redeem(Request $request)
     {   
+        $user_id = $request->get('user_id');
+        $benefit_id = $request->get('benefit_id');
+
+        $user = User::find($user_id);
+        $benefit = Benefit::find($benefit_id);
+
+        if ($user->points < $benefit->points) {
+            return null;
+        }
+
         $client_benefit = ClientsBenefits::create(request()->all());
         $code = hash('crc32b', $client_benefit->id . $client_benefit->user_id . $client_benefit->benefit_id);
 
@@ -66,6 +76,14 @@ class BenefitController extends Controller
         $client_benefit->code = $code;
         $client_benefit->qr_file = url('/').$qr_file;
         $client_benefit->save();
+
+        $user = $client_benefit->user;
+
+        $benefit = $client_benefit->benefit;
+
+        $user->points = $user->points - $benefit->points;
+
+        $user->save();
 
         return $client_benefit;
     }
