@@ -1,0 +1,78 @@
+/* Breakpoints */
+
+$xs-max: 47.938em !default; // 767px
+$sm-min: 48.000em !default; // 768px
+$sm-max: 61.938em !default; // 991px
+$md-min: 62.000em !default; // 992px
+$md-max: 74.938em !default; // approx 1199px
+$lg-min: 75.000em !default; // approx 1200px
+
+/* Brand */
+
+$blue:              #4078c0 !default;
+$gray-dark:         #333    !default;
+$gray-light:        #eceff1 !default;
+$gray:              #cfd8dc !default;
+$green:             #6cc644 !default;
+$orange:            #f08224 !default;
+$purple:            #6e5494 !default;
+$red:               #da272c !default;
+$white:             #fff    !default;
+$black:             #2e2e2e !default;
+$primary-pink:      #ff6d8a !default;
+$primary-blue:      #6d8aff !default;
+$primary-gray:      #d8d8d8 !default;
+
+/* Background colors */
+
+$bg-blue-light:     #f2f8fa !default;
+$bg-blue:           $blue !default;
+$bg-gray-dark:      $gray-dark !default;
+$bg-gray-light:     #fafafa !default;
+$bg-gray:           #f5f5f5 !default;
+$bg-green:          $green !default;
+$bg-orange:         $orange !default;
+$bg-purple:         $purple !default;
+$bg-red:            $red !default;
+$bg-white:          $white !default;
+
+/* Text colors */
+
+$text-blue:         $blue !default;
+$text-gray-dark:    $gray-dark !default;
+$text-gray-light:   $gray-light !default;
+$text-gray:         $gray !default;
+$text-green:        darken($green, 10%) !default;
+$text-orange:       $orange !default;
+$text-purple:       $purple !default;
+$text-red:          $red !default;
+$text-white:        $white !default;
+
+/* Fonts */
+
+$lh-condensed-ultra: 1 !default;
+$lh-default: 1.2 !default;
+
+$font-weight-bold: 600 !default;
+$font-weight-light: 300 !default;
+
+/* Body */
+
+$body-background-color: #f8f8f9;
+$body-color: $black;
+$body-font: Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$body-font-size: 14px !default;
+$body-line-height: $lh-default !default;
+
+/* Sidebar */
+
+$sidebar-width: 280px;
+$sidebar-width-md: 250px;
+$sidebar-background-level-1: #222;
+$sidebar-background-level-2: #000;
+$sidebar-background-level-3: #000;
+
+/* Input */
+
+$input-text-background: #ededed;
+$combo-box-background: #ededed;

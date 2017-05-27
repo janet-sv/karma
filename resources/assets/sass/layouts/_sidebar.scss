@@ -1,0 +1,102 @@
+.sidebar {
+  background-color: $white;
+  width: $sidebar-width;
+  height: 100vh;
+  min-height: 670px;
+  border-right: 1px solid $primary-gray;
+  position: relative;
+
+   @include breakpoint(md) {
+    width: $sidebar-width-md;
+  }
+}
+
+.sidebar-logo-wrapper {
+  padding: 35px 90px;
+  padding-bottom: 0;
+
+  @include breakpoint(md) {
+    padding: 35px 70px;
+  }
+}
+
+.sidebar-welcome-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+
+  @include breakpoint(md) {
+    margin-bottom: 30px;
+  }
+}
+
+.sidebar-welcome {
+  font-weight: 600;
+  font-size: 17px;
+  color: $primary-gray;
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 10px;
+
+  @include breakpoint(md) {
+    margin-top: 15px;
+  }
+}
+
+.sidebar-welcome-photo-wrapper {
+  overflow: hidden;
+  background-color: $primary-gray;
+  border-radius: 130px;
+  height: 130px;
+  width: 130px;
+  margin: auto;
+}
+
+.sidebar-welcome-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sidebar-links {
+  padding: 0;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.sidebar-link {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 1px solid $primary-gray;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 22px 30px;
+
+  &.is-active {
+    border-left: 8px solid $primary-pink;
+    padding-left: 22px;
+
+    .sidebar-link-text {
+      color: $black;
+    }
+  }
+}
+
+.sidebar-link-text {
+  color: $primary-gray;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.sidebar-name-wrapper {
+  padding: 35px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}

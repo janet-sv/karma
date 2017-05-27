@@ -10,6 +10,19 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/', ['as' => 'home', function () {
+    return view('pages.home.home');
+}]);
+
+Route::group(['as' => 'campaings', 'prefix' => 'campanas', 'namespace' => 'App'], function () {
+    Route::get('/', function () {
+        return view('pages.campaing.campaing');
+    });
+});
+
+Route::group(['as' => 'users', 'prefix' => 'usuarios', 'namespace' => 'App'], function () {
+    Route::get('/', function () {
+        return view('pages.user.user');
+    });
 });

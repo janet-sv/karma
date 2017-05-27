@@ -1,0 +1,24 @@
+/* ==========================================================================
+   This file should contain styles the are global to a context. For example,
+   if we had a Dashboard and an Application inside this project, we would create
+   a theme file for each of them.
+   ========================================================================== */
+
+.body-content {
+  display: flex;
+}
+
+.section {
+}
+
+.content-container {
+  width: calc(100% - #{$sidebar-width});
+  padding: 20px;
+  margin-left: $sidebar-width;
+
+  @include breakpoint(md) {
+    width: calc(100% - #{$sidebar-width-md});
+    padding: 40px;
+    margin-left: $sidebar-width-md;
+  }
+}
