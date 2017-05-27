@@ -90,3 +90,24 @@
     background-image: url('../../icons/rubbish-active.svg');
   }
 }
+
+.icon-landing-icon-1 {
+  @extend %icon;
+  background-image: url('../../icons/landing-icon-1.png');
+  height: 60px;
+  width: 70px;
+}
+
+.icon-landing-icon-2 {
+  @extend %icon;
+  background-image: url('../../icons/landing-icon-2.png');
+  height: 60px;
+  width: 60px;
+}
+
+.icon-landing-icon-3 {
+  @extend %icon;
+  background-image: url('../../icons/landing-icon-3.png');
+  height: 60px;
+  width: 60px;
+}

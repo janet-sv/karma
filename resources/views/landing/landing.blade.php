@@ -51,10 +51,53 @@
         Elimina todos los obstáculos para realizar acciones beneficas. Encuentra la campaña para ti y participa.
       </p>
     </div>
+    <div class="landing-section">
+      <hr class="landing-line" />
+      <p class="landing-text-title">¿ Por qué usar <span class="landing-text-pink">+ KARMA</span> ?</p>
+      <div class="landing-benefits">
+        <div class="landing-benefit">
+          <div>
+            <span class="icon-landing-icon-1"></span>
+          </div>
+          <p class="landing-benefit-name">Es fácil</p>
+        </div>
+        <div class="landing-benefit">
+          <div>
+            <span class="icon-landing-icon-2"></span>
+          </div>
+          <p class="landing-benefit-name">Es rápido</p>
+        </div>
+        <div class="landing-benefit">
+          <div>
+            <span class="icon-landing-icon-3"></span>
+          </div>
+          <p class="landing-benefit-name">Es útil</p>
+        </div>
+      </div>
+    </div>
     <div class="landing-section is-gray">
       <p class="landing-contact-us-title">
-
+        ¿ Tienes dudas ? Contactanos.
       </p>
+      <div class="landing-section-wrapper-helper">
+        <form action="">
+          <div class="input-group">
+            <label for="" class="input-label">Nombre:</label>
+            <input type="text" class="input-text" />
+          </div>
+          <div class="input-group">
+            <label for="" class="input-label">Email:</label>
+            <input type="text" class="input-text" />
+          </div>
+          <div class="input-group">
+            <label for="" class="input-label">Consulta:</label>
+            <textarea rows="3" class="textarea"></textarea>
+          </div>
+          <div class="text-center">
+            <input type="submit" class="button-contact-us" value="Aceptar" />
+          </div>
+        </form>
+      </div>
     </div>
 
     <script src="{{ URL::asset('js/vendor.js') }}"></script>
