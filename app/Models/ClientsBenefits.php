@@ -8,6 +8,9 @@ use App\Models\Client;
 
 class ClientsBenefits extends Model
 {
+    protected $fillable = [
+        'benefit_id', 'user_id'
+    ];
 
     public function benefit()
     {

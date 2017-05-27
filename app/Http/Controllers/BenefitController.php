@@ -16,6 +16,6 @@ class BenefitController extends Controller
 
     public function redeem(Request $request)
     {   
-        ClientsBenefits::insert(request()->all());
+        $client = ClientsBenefits::create(request()->all());
     }
 }
