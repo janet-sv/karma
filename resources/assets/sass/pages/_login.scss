@@ -1,0 +1,38 @@
+.login {
+  width: 450px;
+  padding: 30px;
+  border: 1px solid $primary-gray;
+  background: $white;
+}
+
+.login-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 25px;
+  color: $primary-blue;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.login-input-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  border: 1px solid $primary-gray;
+  font-size: 18px;
+}
+
+.login-button {
+  background: $primary-pink;
+  color: $white;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 30px;
+  min-width: 100px;
+}
