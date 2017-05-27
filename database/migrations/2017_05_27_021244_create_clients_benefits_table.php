@@ -17,6 +17,7 @@ class CreateClientsBenefitsTable extends Migration
             $table->increments('id');
             $table->integer('benefit_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->string('code')->nullable();
             $table->string('qr_file')->nullable();
             $table->timestamps();
 
