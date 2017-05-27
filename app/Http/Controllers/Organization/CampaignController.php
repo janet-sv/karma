@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Organization;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Campaing;
 use App\Models\ClientsCampaings;
@@ -24,9 +25,16 @@ class CampaignController extends Controller
 
     public function store()
     {
-        $client_campaing = ClientsCampaings::create(request()->all());
-        $code = hash('crc32b', $client_campaing->id . $client_campaing->user_id . $client_campaing->campaing_id);
+        $user = Auth::user();
+        $campaign = new Campaing(request()->all());
+        $campaign->save();
+        return redirect()->route('campaigns.index');
+    }
 
+    public function generate()
+    {
+       $client_campaign = ClientsCampaings::create(request()->all());
+        $code = hash('crc32b', $client_campaign->id . $client_campaign->user_id . $client_campaign->campaing_id);
         $qr = new QrCode($code);
         $qr_file = '/qr/' . $code . '.png';
         $qr->setSize(300)
@@ -38,10 +46,10 @@ class CampaignController extends Controller
 
         $qr->writeFile(public_path() . $qr_file);
 
-        $client_campaing->code = $code;
-        $client_campaing->qr_file = url('/') . $qr_file;
-        $client_campaing->save();
+        $client_campaign->code = $code;
+        $client_campaign->qr_file = url('/') . $qr_file;
+        $client_campaign->save();
 
-        return $client_campaing;
+        return $client_campaign;
     }
 }

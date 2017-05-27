@@ -15,4 +15,7 @@ class Campaing extends Model
         'title', 'description', 'start_date', 'finish_date', 'place', 'points'
     ];
 
+    public function organization() {
+       return $this->belongsTo(Organization::class);
+    }
 }

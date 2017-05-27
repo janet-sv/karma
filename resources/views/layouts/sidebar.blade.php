@@ -22,17 +22,15 @@
         <p class="sidebar-link-text">Campañas</p>
       </li>
     </a>
-    <a href="{{ route('users') }}">
-      <li class="sidebar-link {{ (request()->is('usuarios') || request()->is('usuarios/*') ? 'is-active' : '') }}">
-        <span class="icon-user {{ (request()->is('usuarios') || request()->is('usuarios/*') ? 'is-active' : '') }}"></span>
-        <p class="sidebar-link-text">Usuarios</p>
-      </li>
-    </a>
-    <a href="#">
+    <a>
+    <form action="logout" method="post">
+    {{ csrf_field() }}
       <li class="sidebar-link">
         <span class="icon-list-button"></span>
-        <p class="sidebar-link-text">Dashboard</p>
+        <button class="sidebar-link-text" style="background: none; border: none;">
+        Cerrar Sesión</button>
       </li>
+    </form>
     </a>
   </ul>
   <div class="sidebar-name-wrapper">

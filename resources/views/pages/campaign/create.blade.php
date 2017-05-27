@@ -9,6 +9,8 @@
 @section('content')
   <div class="content-container">
     <div class="campaign">
+        <form action="{{route('campaigns.store')}}" method="POST">
+        {{ csrf_field() }}
       <div class="campaign-header">
         <h1 class="campaign-title">
           Nueva Campaña
@@ -18,45 +20,34 @@
           </button>
       </div>
       <div class="campaign-form-container">
-        <form>
+          <div class="input-group">
+            <label class="input-label">Nombre:</label>
+            <input type="text" class="input-text" required name="title">
+          </div>
           <div class="campaign-form-input-group-wrapper has-three-groups">
             <div class="input-group">
-              <label class="input-label">Nombre:</label>
-              <input type="text" class="input-text" name="name">
+              <label class="input-label">Puntos Otorgados:</label>
+              <input type="number" class="input-text" required name="points">
             </div>
             <div class="input-group">
               <label class="input-label">Fecha Inicio:</label>
-              <input type="text" class="input-text" name="name">
+              <input type="date" class="input-text" required name="start_date">
             </div>
             <div class="input-group">
               <label class="input-label">Fecha Fin:</label>
-              <input type="text" class="input-text" name="name">
+              <input type="date" class="input-text" required name="finish_date">
             </div>
           </div>
           <div class="input-group">
             <label class="input-label">Dirección:</label>
-            <input type="text" class="input-text" name="name">
-          </div>
-          <div class="campaign-form-input-group-wrapper has-three-groups">
-            <div class="input-group">
-              <label class="input-label">Distrito:</label>
-              <input type="text" class="input-text" name="name">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Ciudad:</label>
-              <input type="text" class="input-text" name="name">
-            </div>
-            <div class="input-group">
-              <label class="input-label">Departamento:</label>
-              <input type="text" class="input-text" name="name">
-            </div>
+            <input type="text" class="input-text" required name="place">
           </div>
           <div class="input-group">
             <label class="input-label">Descripción:</label>
-            <textarea rows="6" class="textarea" name="name"></textarea>
+            <textarea rows="6" class="textarea" name="description" required></textarea>
           </div>
-        </form>
       </div>
+        </form>
     </div>
   </div>
 @endsection

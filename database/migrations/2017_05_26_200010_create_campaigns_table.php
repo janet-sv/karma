@@ -23,7 +23,7 @@ class CreateCampaignsTable extends Migration
             $table->integer('points')->unsigned();
             $table->timestamps();
 
-            $table->integer('organization_id')->unsigned();
+            $table->integer('organization_id')->unsigned()->default(1);
             $table->foreign('organization_id')->references('id')->on('organizations');
         });
     }

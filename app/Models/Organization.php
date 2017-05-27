@@ -26,4 +26,8 @@ class Organization extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function campaign() {
+       return $this->hasMany(Campaign::class);
+    }
 }
