@@ -49,3 +49,14 @@
     background-image: url('../../icons/happy-face-active.svg');
   }
 }
+
+.icon-locked {
+  @extend %icon;
+  background-image: url('../../icons/locked.svg');
+  height: 19px;
+  width: 19px;
+
+  &.is-active {
+    background-image: url('../../icons/locked-active.svg');
+  }
+}

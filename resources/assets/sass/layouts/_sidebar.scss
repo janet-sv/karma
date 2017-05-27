@@ -5,6 +5,7 @@
   min-height: 630px;
   border-right: 1px solid $primary-gray;
   position: relative;
+  box-shadow: 2px 2px 5px $gray-light;
 
    @include breakpoint(md) {
     width: $sidebar-width-md;

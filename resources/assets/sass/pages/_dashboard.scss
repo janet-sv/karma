@@ -3,10 +3,11 @@
 }
 
 .dashboard-title {
-  color: $primary-gray;
+  color: $primary-blue;
   font-size: 30px;
   font-weight: 600;
   margin: 0;
+  text-shadow: 2px 2px $gray-light;
 
   @include breakpoint(md) {
     font-size: 35px;
@@ -33,6 +34,7 @@
   justify-content: center;
   width: 30%;
   padding: 20px 5px;
+  box-shadow: 2px 2px 5px $gray-light;
 
   &:last-child {
     margin-right: 0;
@@ -94,6 +96,7 @@
   width: 600px;
   padding: 20px 35px;
   border: 1px solid $primary-gray;
+  box-shadow: 2px 2px 5px $gray-light;
 
   @include breakpoint(md) {
     width: 640px;
