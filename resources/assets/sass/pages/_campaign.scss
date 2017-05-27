@@ -1,0 +1,51 @@
+.campaign {
+  padding: 0 10px;
+}
+
+.campaign-title {
+  @extend .title-page;
+}
+
+.campaign-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.campaign-button {
+  @extend %button;
+  min-width: 200px;
+}
+
+.campaign-table-container {
+  margin-top: 50px;
+}
+
+.campaign-table-actions-container {
+  text-align: center;
+}
+
+.campaign-table-actions {
+  margin: 0 5px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.campaign-form-container {
+  margin-top: 50px;
+}
+
+.campaign-form-input-group-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.has-three-groups {
+    .input-group {
+      width: 30%;
+    }
+  }
+}
