@@ -21,7 +21,7 @@ class CampaignController extends Controller
         $code = hash('crc32b', $client_campaing->id . $client_campaing->user_id . $client_campaing->campaing_id);
 
         $qr = new QrCode($code);
-        $qr_file = '/qr/' . $code.' . png';
+        $qr_file = '/qr/' . $code . '.png';
         $qr->setSize(300)
            ->setMargin(10)
            ->setEncoding('UTF-8')
@@ -29,7 +29,7 @@ class CampaignController extends Controller
            ->setForegroundColor(['r' => 0, 'g' => 0, 'b' => 0])
            ->setBackgroundColor(['r' => 255, 'g' => 255, 'b' => 255]);
 
-        $qr->writeFile(public_path().$qr_file);
+        $qr->writeFile(public_path() . $qr_file);
 
         $client_campaing->code = $code;
         $client_campaing->qr_file = url('/') . $qr_file;

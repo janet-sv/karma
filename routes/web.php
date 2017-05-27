@@ -23,7 +23,7 @@ Route::get('/login', ['as' => 'login', function () {
     return view('pages.login.login');
 }]);
 
-Route::group(['as' => 'campaigns', 'prefix' => 'campanas', 'namespace' => 'App'], function () {
+Route::group(['as' => 'campaigns', 'prefix' => 'campanas', 'namespace' => 'Organization'], function () {
     Route::get('/', function () {
         return view('pages.campaign.campaign');
     });
