@@ -17,5 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('api')->get('benefits', 'BenefitController@index');
+Route::group(['prefix' => 'benefit', 'middleware' => 'api'], function(){
+    Route::get('list', 'BenefitController@index');
+    Route::post('redeem', 'BenefitController@redeem');
+});
+
+//Route::middleware('api')->get('benefits', 'BenefitController@index');
 Route::middleware('api')->get('campaings', 'CampaingController@index');
