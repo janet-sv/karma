@@ -41,7 +41,6 @@
 
 .landing-header-logo-wrapper {
   background: $white;
-  box-shadow: 2px 2px 2px $gray-light;
   width: 80px;
   height: 80px;
   border-radius: 40px;
@@ -95,11 +94,12 @@
       color: $white;
 
       &.is-big {
-        font-size: 20px;
+        font-size: 30px;
+        margin-bottom: 10px;
       }
 
-      &.is-short {
-        font-size: 18px;
+      &.is-little {
+        font-size: 20px;
       }
     }
 
@@ -120,7 +120,8 @@
 
   &.is-normal {
     font-weight: 500;
-    max-width: 30%;
+    max-width: 40%;
+    font-size: 18px;
   }
 }
 
@@ -133,4 +134,56 @@
   a {
     width: 45%;
   }
+}
+
+.landing-section-wrapper-helper {
+  width: 300px;
+  margin: 35px auto 0 auto;
+}
+
+.landing-contact-us-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.button-contact-us {
+  @extend %button;
+}
+
+.landing-line {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  width: 80%;
+}
+
+.landing-text-title {
+  color: $black;
+  text-align: center;
+  font-size: 25px;
+  margin-top: 40px;
+
+  .landing-text-pink {
+    font-weight: 700;
+    color: $primary-pink;
+  }
+}
+
+.landing-benefits {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.landing-benefit {
+  text-align: center;
+  min-width: 300px;
+}
+
+.landing-benefit-name {
+  font-size: 18px;
 }

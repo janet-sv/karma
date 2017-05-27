@@ -11,11 +11,11 @@
 |
 */
 
-Route::get('/landing', ['as' => 'landing', function () {
+Route::get('/', ['as' => 'landing', function () {
     return view('landing.landing');
 }]);
 
-Route::get('/', ['as' => 'home', function () {
+Route::get('/dashboard', ['as' => 'home', function () {
     return view('pages.home.home');
 }]);
 
