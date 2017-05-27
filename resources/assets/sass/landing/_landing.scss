@@ -1,48 +1,136 @@
-.landing-section {
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-  padding: 40px;
+.landing {
+  background: $white;
+}
 
-  &.is-blue {
-    background: $primary-blue;
+.landing-phone-container {
+  width: 18%;
+  position: absolute;
+  right: 15%;
+  top: 120px;
+  z-index: 20;
+}
+
+.landing-phone-content {
+  position: absolute;
+  right: 7.5%;
+  top: 14.7%;
+  width: 84%;
+}
+
+.landing-header {
+  background: $primary-blue;
+  display: flex;
+  justify-content: space-around;
+}
+
+.landing-header-element {
+  width: 50%;
+  padding: 40px 100px;
+  &:nth-child(even) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
-.landing-section-element {
-  width: 400px;
+.landing-header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.landing-section-logo-wrapper {
-  padding: 20px;
+.landing-header-logo-wrapper {
   background: $white;
   box-shadow: 2px 2px 2px $gray-light;
-  width: 380px;
-  height: 380px;
-  border-radius: 380px;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
   position: relative;
 }
 
-.landing-section-logo {
+.landing-header-logo-image {
   @extend %absolute-vertical-align;
+  width: 85%;
+  height: 85%;
 }
 
-.landing-section-name-wrapper {
-  margin-top: 30px;
-  text-align: center;
+.landing-header-name-wrapper {
+  width: 100px;
+  margin-left: 20px;
 }
 
-.landing-section-welcome-text {
+.landing-header-login-link {
   color: $white;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
+
+  &:hover {
+    text-decoration: none;
+    color: $primary-pink;
+  }
 }
 
-.landing-section-button-wrapper {
-  text-align: center;
+.landing-section {
+  padding: 50px 100px;
+  background: $white;
+
+  .landing-section-text {
+    color: $black;
+  }
+
+  &.has-extra-margin {
+    margin-top: 120px;
+  }
+
+  &.is-gray {
+    background: $gray-light;
+  }
+
+  &.is-blue {
+    background-color: $primary-blue;
+    position: relative;
+    padding-bottom: 0;
+
+    .landing-section-text {
+      color: $white;
+
+      &.is-big {
+        font-size: 20px;
+      }
+
+      &.is-short {
+        font-size: 18px;
+      }
+    }
+
+    .landing-section-bottom {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+  }
 }
 
-.landing-section-button {
-  @extend %button;
-  box-shadow: 1px 1px 0px $gray-light;
+.landing-section-text {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: 700;
+
+  &.is-normal {
+    font-weight: 500;
+    max-width: 30%;
+  }
+}
+
+.landing-section-app-stores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25%;
+
+  a {
+    width: 45%;
+  }
 }

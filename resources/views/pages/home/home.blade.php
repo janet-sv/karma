@@ -188,7 +188,7 @@
                 ],
                 backgroundColor: [
                     '#ff6d8a',
-                    '#6d8aff',
+                    '#5d7aff',
                     '#64e283'
                 ],
                 borderWidth: [ 0, 0, 0]
@@ -211,7 +211,7 @@
       strokeWidth: 4,
       easing: 'bounce',
       duration: 1400,
-      color: '#6d8aff',
+      color: '#5d7aff',
       trailColor: '#64e283',
       trailWidth: 4,
       svgStyle: {width: '100%', height: '100%', 'border-radius': '20px'}
