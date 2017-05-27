@@ -3,24 +3,12 @@
 }
 
 .dashboard-title {
-  color: $primary-blue;
-  font-size: 30px;
-  font-weight: 600;
-  margin: 0;
-  text-shadow: 2px 2px $gray-light;
-
-  @include breakpoint(md) {
-    font-size: 35px;
-  }
+  @extend .title-page;
 }
 
 .dashboard-cards-container {
   display: flex;
   justify-content: space-between;
-
-  @include breakpoint(md) {
-    justify-content: space-between;
-  }
 }
 
 .dashboard-card {
@@ -28,7 +16,7 @@
   min-width: 200px;
   border: 1px solid $primary-gray;
   margin: 20px 0;
-  margin-right: 10px;
+  margin-right: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,16 +81,68 @@
 
 .dashboard-card-linear-chart-container {
   background-color: $white;
-  width: 600px;
+  width: 65%;
   padding: 20px 35px;
   border: 1px solid $primary-gray;
   box-shadow: 2px 2px 5px $gray-light;
+  margin: 20px 0;
+  margin-right: 5%;
+}
 
-  @include breakpoint(md) {
-    width: 640px;
+.dashboard-card-liner-chart {
+  margin-top: 20px;
+}
+
+.dashboard-card-donut-chart-wrapper {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.dashboard-card-donut-chart {
+  width: 90px;
+}
+
+.dashboard-card-chart-legend-container {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 25px 0;
+
+  &:last-child {
+    margin-bottom: 0,
+  }
+
+  .is-pink {
+    font-size: 20px;
+    line-height: 5px;
+    color: $primary-pink;
+  }
+
+  .is-blue {
+    font-size: 20px;
+    line-height: 5px;
+    color: $primary-blue;
+  }
+
+  .is-green {
+    font-size: 20px;
+    line-height: 5px;
+    color: $primary-green;
   }
 }
 
-.dashboard-card-linera-chart {
-  margin-top: 20px;
+.dashboard-card-chart-legend {
+  list-style: none;
+  margin: 0 10px 0 5px;
+  color: $primary-gray;
+}
+
+.dashboard-card-numeric-list {
+  padding-left: 50px;
+  width: 80%;
+  margin: 20px auto;
+  text-align: left;
 }

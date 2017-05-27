@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/landing', ['as' => 'landing', function () {
+    return view('landing.landing');
+}]);
+
 Route::get('/', ['as' => 'home', function () {
     return view('pages.home.home');
 }]);
@@ -23,6 +27,9 @@ Route::group(['as' => 'campaings', 'prefix' => 'campanas', 'namespace' => 'App']
     Route::get('/', function () {
         return view('pages.campaing.campaing');
     });
+    Route::get('/crear', ['as' => '.create', function () {
+        return view('pages.campaing.create');
+    }]);
     Route::post('generar', 'CampaingController@store');
 });
 
