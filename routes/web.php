@@ -38,3 +38,7 @@ Route::group(['as' => 'users', 'prefix' => 'usuarios', 'namespace' => 'App'], fu
         return view('pages.user.user');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
