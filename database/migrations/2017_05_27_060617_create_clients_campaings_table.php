@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientsBenefitsTable extends Migration
+class CreateClientsCampaingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreateClientsBenefitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('clients_benefits', function (Blueprint $table) {
+        Schema::create('clients_campaings', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('benefit_id')->unsigned();
+            $table->integer('campaing_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->string('code')->nullable();
             $table->string('qr_file')->nullable();
             $table->char('used')->nullable();
             $table->timestamps();
 
-            $table->foreign('benefit_id')->references('id')->on('benefits');
+            $table->foreign('campaing_id')->references('id')->on('campaings');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
@@ -34,6 +34,6 @@ class CreateClientsBenefitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clients_benefits');
+        Schema::dropIfExists('clients_campaings');
     }
 }

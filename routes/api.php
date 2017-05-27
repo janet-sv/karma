@@ -22,4 +22,7 @@ Route::group(['prefix' => 'benefits', 'middleware' => 'api'], function(){
     Route::post('redeem', 'BenefitController@redeem');
 });
 
-Route::middleware('api')->get('campaings', 'CampaingController@index');
+Route::group(['prefix' => 'campaings', 'middleware' => 'api'], function(){
+    Route::get('/', 'CampaingController@index');
+    Route::post('/validate', 'CampaingController@validateCampaing');
+});
