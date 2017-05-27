@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request ;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +17,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('api')->get('benefits', 'BenefitController@index');
-Route::middleware('api')->get('campaings', 'CampaingController@index');
+Route::group(['prefix' => 'sessions'], function() {
+    Route::get('/get', 'SessionController@get');
+    Route::post('/create', 'SessionController@create');
+});
+
+Route::group(['prefix' => 'benefits', 'middleware' => 'jwt.auth'], function() {
+    Route::get('/{benefit_id}', 'BenefitController@get');
+    Route::get('/created', 'BenefitController@created');
+    Route::get('/created/{benefit_id}', 'BenefitController@getCreated');
+    Route::post('redeem', 'BenefitController@redeem');
+});
+
+Route::group(['prefix' => 'campaigns', 'middleware' => 'jwt.auth'], function() {
+    Route::get('/', 'CampaignController@index');
+    Route::get('/{campaign_id}', 'CampaignController@get');
+    Route::post('/validate', 'CampaignController@validateCampaing');
+});
