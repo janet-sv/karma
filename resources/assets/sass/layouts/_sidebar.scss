@@ -2,9 +2,10 @@
   background-color: $white;
   width: $sidebar-width;
   height: 100vh;
-  min-height: 670px;
+  min-height: 630px;
   border-right: 1px solid $primary-gray;
   position: relative;
+  box-shadow: 2px 2px 5px $gray-light;
 
    @include breakpoint(md) {
     width: $sidebar-width-md;
@@ -12,7 +13,7 @@
 }
 
 .sidebar-logo-wrapper {
-  padding: 35px 90px;
+  padding: 35px 75px;
   padding-bottom: 0;
 
   @include breakpoint(md) {
@@ -73,7 +74,7 @@
   list-style-type: none;
   display: flex;
   align-items: center;
-  padding: 22px 30px;
+  padding: 18px 30px;
 
   &.is-active {
     border-left: 8px solid $primary-pink;
@@ -87,8 +88,8 @@
 
 .sidebar-link-text {
   color: $primary-gray;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   margin: 0;
   margin-left: 15px;
 }
@@ -96,7 +97,7 @@
 .sidebar-name-wrapper {
   padding: 35px;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   text-align: center;
   width: 100%;
 }
