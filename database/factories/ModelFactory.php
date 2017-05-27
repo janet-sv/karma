@@ -12,13 +12,39 @@
 */
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
+$factory->define(App\Models\User::class, function (Faker\Generator $faker) {
+    $userName = $faker->userName;
 
     return [
         'name' => $faker->name,
+        'lastname' => $faker->lastName,
+        'username' => $userName,
         'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'password' => bcrypt($userName),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Models\Organization::class, function (Faker\Generator $faker) {
+    $userName = $faker->userName;
+
+    return [
+        'name' => $faker->name,
+        'username' => $userName,
+        'email' => $faker->unique()->safeEmail,
+        'password' => bcrypt($userName),
+        'remember_token' => str_random(10),
+    ];
+});
+
+$factory->define(App\Models\Business::class, function (Faker\Generator $faker) {
+    $userName = $faker->userName;
+
+    return [
+        'name' => $faker->name,
+        'username' => $userName,
+        'email' => $faker->unique()->safeEmail,
+        'password' => bcrypt($userName),
         'remember_token' => str_random(10),
     ];
 });
@@ -31,7 +57,7 @@ $factory->define(App\Models\Benefit::class, function (Faker\Generator $faker) {
         'due_date' => $faker->dateTimeBetween('now','+30 days'),
         'place' => $faker->text(15),
         'points' => $faker->numberBetween(10,99),
-//        'qr_file' => url()->full().'/qr/qrimage.png',
+        'business_id' => $faker->numberBetween(1,20),
     ];
 });
 
@@ -43,5 +69,6 @@ $factory->define(App\Models\Campaing::class, function (Faker\Generator $faker) {
         'finish_date' => $faker->dateTimeBetween('now','+100 days'),
         'place' => $faker->text(15),
         'points' => $faker->numberBetween(10,99),
+        'organization_id' => $faker->numberBetween(1,15),
     ];
 });

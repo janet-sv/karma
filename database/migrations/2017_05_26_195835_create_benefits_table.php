@@ -20,12 +20,11 @@ class CreateBenefitsTable extends Migration
             $table->string('image_url');
             $table->string('place');
             $table->date('due_date');
-//            $table->string('qr_file'); es del canjeo
             $table->integer('points')->unsigned();
+            $table->integer('business_id')->unsigned()->nullable();
             $table->timestamps();
             
-            //$table->integer('user_id')->unsigned();
-            //$table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('business_id')->references('id')->on('businesses');
         });
     }
 
