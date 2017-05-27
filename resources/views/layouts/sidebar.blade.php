@@ -16,7 +16,7 @@
         <p class="sidebar-link-text">Dashboard</p>
       </li>
     </a>
-    <a href="{{ route('campaings') }}">
+    <a href="{{ route('campaigns') }}">
       <li class="sidebar-link {{ (request()->is('campanas') || request()->is('campanas/*') ? 'is-active' : '') }}">
         <span class="icon-happy-face {{ (request()->is('campanas') || request()->is('campanas/*') ? 'is-active' : '') }}"></span>
         <p class="sidebar-link-text">Campañas</p>

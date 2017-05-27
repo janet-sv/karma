@@ -23,14 +23,14 @@ Route::get('/login', ['as' => 'login', function () {
     return view('pages.login.login');
 }]);
 
-Route::group(['as' => 'campaings', 'prefix' => 'campanas', 'namespace' => 'App'], function () {
+Route::group(['as' => 'campaigns', 'prefix' => 'campanas', 'namespace' => 'App'], function () {
     Route::get('/', function () {
-        return view('pages.campaing.campaing');
+        return view('pages.campaign.campaign');
     });
     Route::get('/crear', ['as' => '.create', function () {
-        return view('pages.campaing.create');
+        return view('pages.campaign.create');
     }]);
-    Route::post('generar', 'CampaingController@store');
+    Route::post('generar', 'campaignController@store');
 });
 
 Route::group(['as' => 'users', 'prefix' => 'usuarios', 'namespace' => 'App'], function () {

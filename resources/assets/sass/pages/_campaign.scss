@@ -1,31 +1,31 @@
-.campaing {
+.campaign {
   padding: 0 10px;
 }
 
-.campaing-title {
+.campaign-title {
   @extend .title-page;
 }
 
-.campaing-header {
+.campaign-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.campaing-button {
+.campaign-button {
   @extend %button;
   min-width: 200px;
 }
 
-.campaing-table-container {
+.campaign-table-container {
   margin-top: 50px;
 }
 
-.campaing-table-actions-container {
+.campaign-table-actions-container {
   text-align: center;
 }
 
-.campaing-table-actions {
+.campaign-table-actions {
   margin: 0 5px;
   cursor: pointer;
 
@@ -34,11 +34,11 @@
   }
 }
 
-.campaing-form-container {
+.campaign-form-container {
   margin-top: 50px;
 }
 
-.campaing-form-input-group-wrapper {
+.campaign-form-input-group-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
