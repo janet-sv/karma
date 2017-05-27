@@ -11,12 +11,12 @@
   </div>
   <ul class="sidebar-links">
     <a href="{{ route('home') }}">
-      <li class="sidebar-link {{ (request()->is('/') ? 'is-active' : '') }}">
-        <span class="icon-home {{ (request()->is('/') ? 'is-active' : '') }}"></span>
+      <li class="sidebar-link {{ (request()->is('dashboard') ? 'is-active' : '') }}">
+        <span class="icon-home {{ (request()->is('dashboard') ? 'is-active' : '') }}"></span>
         <p class="sidebar-link-text">Dashboard</p>
       </li>
     </a>
-    <a href="{{ route('campaigns') }}">
+    <a href="{{ route('campaigns.index') }}">
       <li class="sidebar-link {{ (request()->is('campanas') || request()->is('campanas/*') ? 'is-active' : '') }}">
         <span class="icon-happy-face {{ (request()->is('campanas') || request()->is('campanas/*') ? 'is-active' : '') }}"></span>
         <p class="sidebar-link-text">Campañas</p>

@@ -31,20 +31,22 @@
             </tr>
           </thead>
           <tbody class="table-body">
-            <tr class="table-body-row">
-              <td class="table-body-column">Colecta Miraflores</td>
-              <td class="table-body-column">Miraflores, Lima</td>
-              <td class="table-body-column">08/06/2017</td>
-              <td class="table-body-column">08/06/2017</td>
-              <td class="table-body-column campaign-table-actions-container">
-                <a href="#" class="campaign-table-actions">
-                  <span class="icon-pencil"></span>
-                </a>
-                <a href="#" class="campaign-table-actions">
-                  <span class="icon-rubbish"></span>
-                </a>
-              </td>
-            </tr>
+            @foreach ($campaigns as $campaign)
+              <tr class="table-body-row">
+                <td class="table-body-column">{{ $campaign->title }}</td>
+                <td class="table-body-column">{{ $campaign->place }}</td>
+                <td class="table-body-column">{{ $campaign->start_date }}</td>
+                <td class="table-body-column">{{ $campaign->finish_date }}</td>
+                <td class="table-body-column campaign-table-actions-container">
+                  <a href="#" class="campaign-table-actions">
+                    <span class="icon-pencil"></span>
+                  </a>
+                  <a href="#" class="campaign-table-actions">
+                    <span class="icon-rubbish"></span>
+                  </a>
+                </td>
+              </tr>
+            @endforeach
           </tbody>
         </table>
       </div>

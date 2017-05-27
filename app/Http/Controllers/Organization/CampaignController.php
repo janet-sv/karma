@@ -15,8 +15,15 @@ use Endroid\QrCode\ErrorCorrectionLevel;
 class CampaignController extends Controller
 {
 
+    public function index()
+    {
+       $campaigns = Campaing::all();
+
+       return view('pages.campaign.campaign', ['campaigns' => $campaigns]);
+    }
+
     public function store()
-    {   
+    {
         $client_campaing = ClientsCampaings::create(request()->all());
         $code = hash('crc32b', $client_campaing->id . $client_campaing->user_id . $client_campaing->campaing_id);
 
@@ -34,7 +41,7 @@ class CampaignController extends Controller
         $client_campaing->code = $code;
         $client_campaing->qr_file = url('/') . $qr_file;
         $client_campaing->save();
-        
+
         return $client_campaing;
     }
 }
