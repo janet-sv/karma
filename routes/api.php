@@ -23,11 +23,14 @@ Route::group(['prefix' => 'sessions'], function() {
 });
 
 Route::group(['prefix' => 'benefits', 'middleware' => 'jwt.auth'], function() {
-    Route::get('/', 'BenefitController@index');
+    Route::get('/{benefit_id}', 'BenefitController@get');
+    Route::get('/created', 'BenefitController@created');
+    Route::get('/created/{benefit_id}', 'BenefitController@getCreated');
     Route::post('redeem', 'BenefitController@redeem');
 });
 
 Route::group(['prefix' => 'campaigns', 'middleware' => 'jwt.auth'], function() {
     Route::get('/', 'CampaignController@index');
+    Route::get('/{campaign_id}', 'CampaignController@get');
     Route::post('/validate', 'CampaignController@validateCampaing');
 });

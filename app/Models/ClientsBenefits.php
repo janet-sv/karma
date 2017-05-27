@@ -12,13 +12,15 @@ class ClientsBenefits extends Model
         'benefit_id', 'user_id'
     ];
 
+    protected $table = 'clients_benefits';
+
     public function benefit()
     {
-        $this->belongsTo(Benefit::class);
+        return $this->belongsTo(Benefit::class);
     }
 
     public function client()
     {
-        $this->belongsTo(Client::class);
+        return $this->belongsTo(Client::class);
     }
 }

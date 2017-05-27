@@ -14,9 +14,27 @@ use Endroid\QrCode\ErrorCorrectionLevel;
 
 class BenefitController extends Controller
 {
-    public function index()
+    public function get(Request $request, $benefit_id)
     {
-        return Benefit::all();
+        $benefit = Benefit::find($benefit_id);
+
+        return $benefit;
+    }
+
+    public function created()
+    {
+        $user = $this->getApiCurrentUser();
+
+        $benefits = $user->created_benefits()->with('benefit')->get()->toArray();
+
+        return response()->json($benefits);
+    }
+
+    public function getCreated(Request $request, $created_id)
+    {
+        $benefit = ClientsBenefits::find($created_id)->with('benefit')->get();
+
+        return $benefit;
     }
 
     public function redeem(Request $request)
