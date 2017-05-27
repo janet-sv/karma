@@ -15,8 +15,7 @@
 
 .dashboard-cards-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 
   @include breakpoint(md) {
     justify-content: space-between;
@@ -25,20 +24,18 @@
 
 .dashboard-card {
   background-color: $white;
-  width: 280px;
-  padding: 20px 35px;
+  min-width: 200px;
   border: 1px solid $primary-gray;
   margin: 20px 0;
-  margin-right: 40px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 30%;
+  padding: 20px 5px;
 
   &:last-child {
     margin-right: 0;
-  }
-
-  @include breakpoint(md) {
-    width: 300px;
   }
 }
 
@@ -66,12 +63,14 @@
 .dashboard-card-information-text {
   color: $primary-gray;
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
 }
 
 .dashboard-card-information-progressbar {
+  margin: auto;
   margin-top: 10px;
+  width: 80%;
 }
 
 .dashboard-card-wrapper-helper {

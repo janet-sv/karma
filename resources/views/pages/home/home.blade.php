@@ -1,68 +1,76 @@
 @extends('layouts.app')
 
-@section('content')
-  <div class="dashboard">
-    <h1 class="dashboard-title">
-      Dashboard
-    </h1>
-    <div class="dashboard-filter-container">
+@section('sidebar')
+  <div class="fixed">
+    @include('layouts.sidebar')
+  </div>
+@endsection
 
-    </div>
-    <div class="dashboard-cards-container">
-      <div class="dashboard-card">
-        <div class="dashboard-card-wrapper-helper">
-          <div class="dashboard-card-information-wrapper">
-            <p class="dashboard-card-information-number">
-              1,161
-            </p>
-            <p class="dashboard-card-information-text">
-              Total de Registros
-            </p>
+@section('content')
+  <div class="content-container">
+    <div class="dashboard">
+      <h1 class="dashboard-title">
+        Dashboard
+      </h1>
+      <div class="dashboard-filter-container">
+
+      </div>
+      <div class="dashboard-cards-container">
+        <div class="dashboard-card">
+          <div class="dashboard-card-wrapper-helper">
+            <div class="dashboard-card-information-wrapper">
+              <p class="dashboard-card-information-number">
+                1,161
+              </p>
+              <p class="dashboard-card-information-text">
+                Total de Registros
+              </p>
+            </div>
+            <div class="dashboard-card-information-wrapper">
+              <p class="dashboard-card-information-number">
+                2,207
+              </p>
+              <p class="dashboard-card-information-text">
+                Total de Visitas
+              </p>
+            </div>
           </div>
-          <div class="dashboard-card-information-wrapper">
-            <p class="dashboard-card-information-number">
-              2,207
-            </p>
-            <p class="dashboard-card-information-text">
-              Total de Visitas
-            </p>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-wrapper-helper">
+            <div class="dashboard-card-information-wrapper">
+              <p class="dashboard-card-information-number">
+                73%
+              </p>
+              <p class="dashboard-card-information-text">
+                Ratio de Conversión
+              </p>
+            </div>
+            <div id="ratio-progress-bar" class="dashboard-card-information-progressbar"></div>
+          </div>
+        </div>
+        <div class="dashboard-card">
+          <div class="dashboard-card-wrapper-helper">
+            <div id="circle-bar" class="dashboard-card-information-progresscircle">
+              <p class="dashboard-card-information-number">
+                24%
+              </p>
+            </div>
+            <div class="dashboard-card-information-wrapper">
+              <p class="dashboard-card-information-text">
+                Avance de meta
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="dashboard-card">
-        <div class="dashboard-card-wrapper-helper">
-          <div class="dashboard-card-information-wrapper">
-            <p class="dashboard-card-information-number">
-              73%
-            </p>
-            <p class="dashboard-card-information-text">
-              Ratio de Conversión
-            </p>
-          </div>
-          <div id="ratio-progress-bar" class="dashboard-card-information-progressbar"></div>
+      <div>
+        <div class="dashboard-card-linear-chart-container">
+          <p class="dashboard-card-information-text">
+            Histórico de Registros
+          </p>
+          <canvas class="dashboard-card-linera-chart" id="linear-chart" width="400" height="250"></canvas>
         </div>
-      </div>
-      <div class="dashboard-card">
-        <div class="dashboard-card-wrapper-helper">
-          <div id="circle-bar" class="dashboard-card-information-progresscircle">
-            <p class="dashboard-card-information-number">
-              24%
-            </p>
-          </div>
-          <div class="dashboard-card-information-wrapper">
-            <p class="dashboard-card-information-text">
-              Avance de meta
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="dashboard-card-linear-chart-container">
-        <p class="dashboard-card-information-text">
-          Histórico de Registros
-        </p>
-        <canvas class="dashboard-card-linera-chart" id="linear-chart" width="400" height="250"></canvas>
       </div>
     </div>
   </div>

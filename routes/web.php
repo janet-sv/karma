@@ -15,6 +15,10 @@ Route::get('/', ['as' => 'home', function () {
     return view('pages.home.home');
 }]);
 
+Route::get('/login', ['as' => 'login', function () {
+    return view('pages.login.login');
+}]);
+
 Route::group(['as' => 'campaings', 'prefix' => 'campanas', 'namespace' => 'App'], function () {
     Route::get('/', function () {
         return view('pages.campaing.campaing');
