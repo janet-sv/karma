@@ -6,7 +6,9 @@
 </head>
 <body>
   <div class="body-content">
-    @include('layouts.sidebar')
+    <div class="fixed">
+      @include('layouts.sidebar')
+    </div>
     <div class="content-container">
       @yield('content')
     </div>
@@ -14,6 +16,5 @@
     <script src="{{ URL::asset('js/vendor.js') }}"></script>
     @yield('javascript')
   </div>
-
 </body>
 </html>

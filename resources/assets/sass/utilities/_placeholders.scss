@@ -1,0 +1,18 @@
+%vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+%absolute-vertical-align {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+%flex-vertical-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

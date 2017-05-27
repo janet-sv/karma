@@ -20,6 +20,7 @@
 
 .relative { position: relative !important; }
 .absolute { position: absolute !important; }
+.fixed { position: fixed !important; }
 
 .left  { float: left  !important; }
 .right { float: right !important; }
@@ -45,5 +46,6 @@
 .justify-content-space-between { justify-content: space-between !important; }
 
 .align-items-flex-start  { align-items: flex-start !important; }
+.align-items-center  { align-items: center !important; }
 
 .cursor-pointer{ cursor: pointer !important; }
