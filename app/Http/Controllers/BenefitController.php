@@ -20,10 +20,10 @@ class BenefitController extends Controller
     public function redeem(Request $request)
     {   
         $client_benefit = ClientsBenefits::create(request()->all());
-        $client_benefit->code = hash('crc32b', $client_benefit->id.$client_benefit->user_id.$client_benefit->benefit_id);
-        $qr_file = '/qr/'.$client_benefit->code.'.png';
+        $code = hash('crc32b', $client_benefit->id.$client_benefit->user_id.$client_benefit->benefit_id);
 
-        $qr = new QrCode( $client_benefit->code );
+        $qr = new QrCode($code);
+        $qr_file = '/qr/'.$code.'.png';
         $qr->setSize(300)
             ->setMargin(10)
             ->setEncoding('UTF-8')
@@ -32,7 +32,8 @@ class BenefitController extends Controller
             ->setBackgroundColor(['r' => 255, 'g' => 255, 'b' => 255]);
         $qr->writeFile(public_path().$qr_file);
 
-        $client_benefit->qr_file = url()->full().$qr_file;
+        $client_benefit->code = $code;
+        $client_benefit->qr_file = url('/').$qr_file;
         $client_benefit->save();
         return $client_benefit;
     }
