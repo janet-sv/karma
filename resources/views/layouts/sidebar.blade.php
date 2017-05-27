@@ -17,14 +17,14 @@
       </li>
     </a>
     <a href="{{ route('campaings') }}">
-      <li class="sidebar-link {{ (request()->is('campanas') ? 'is-active' : '') }}">
-        <span class="icon-happy-face {{ (request()->is('campanas') ? 'is-active' : '') }}"></span>
+      <li class="sidebar-link {{ (request()->is('campanas') || request()->is('campanas/*') ? 'is-active' : '') }}">
+        <span class="icon-happy-face {{ (request()->is('campanas') || request()->is('campanas/*') ? 'is-active' : '') }}"></span>
         <p class="sidebar-link-text">Campañas</p>
       </li>
     </a>
     <a href="{{ route('users') }}">
-      <li class="sidebar-link {{ (request()->is('usuarios') ? 'is-active' : '') }}">
-        <span class="icon-user {{ (request()->is('usuarios') ? 'is-active' : '') }}"></span>
+      <li class="sidebar-link {{ (request()->is('usuarios') || request()->is('usuarios/*') ? 'is-active' : '') }}">
+        <span class="icon-user {{ (request()->is('usuarios') || request()->is('usuarios/*') ? 'is-active' : '') }}"></span>
         <p class="sidebar-link-text">Usuarios</p>
       </li>
     </a>

@@ -1,0 +1,51 @@
+.campaing {
+  padding: 0 10px;
+}
+
+.campaing-title {
+  @extend .title-page;
+}
+
+.campaing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.campaing-button {
+  @extend %button;
+  min-width: 200px;
+}
+
+.campaing-table-container {
+  margin-top: 50px;
+}
+
+.campaing-table-actions-container {
+  text-align: center;
+}
+
+.campaing-table-actions {
+  margin: 0 5px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.campaing-form-container {
+  margin-top: 50px;
+}
+
+.campaing-form-input-group-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.has-three-groups {
+    .input-group {
+      width: 30%;
+    }
+  }
+}

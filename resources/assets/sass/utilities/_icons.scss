@@ -60,3 +60,33 @@
     background-image: url('../../icons/locked-active.svg');
   }
 }
+
+.icon-pencil {
+  @extend %icon;
+  background-image: url('../../icons/pencil.svg');
+  height: 19px;
+  width: 19px;
+
+  &:hover {
+    background-image: url('../../icons/pencil-active.svg');
+  }
+
+  &.is-active {
+    background-image: url('../../icons/pencil-active.svg');
+  }
+}
+
+.icon-rubbish {
+  @extend %icon;
+  background-image: url('../../icons/rubbish.svg');
+  height: 19px;
+  width: 19px;
+
+  &:hover {
+    background-image: url('../../icons/rubbish-active.svg');
+  }
+
+  &.is-active {
+    background-image: url('../../icons/rubbish-active.svg');
+  }
+}

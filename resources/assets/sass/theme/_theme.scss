@@ -31,3 +31,15 @@
   align-items: center;
   background: $primary-blue;
 }
+
+.title-page {
+  color: $primary-blue;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 2px 2px $gray-light;
+
+  @include breakpoint(md) {
+    font-size: 35px;
+  }
+}

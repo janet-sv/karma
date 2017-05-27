@@ -16,3 +16,79 @@
   align-items: center;
   justify-content: center;
 }
+
+%button {
+  background: $primary-pink;
+  color: $white;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 30px;
+  min-width: 100px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px $gray-light;
+}
+
+.table {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.table-header {
+  border-bottom: 1px solid $black;
+}
+
+.table-header-column {
+  padding: 15px;
+  text-align: left;
+}
+
+.table-body-row {
+  border-bottom: 1px solid $primary-gray;
+  color: $gray-dark;
+
+  &:nth-child(odd) {
+    background: $white;
+  }
+}
+
+.table-body-column {
+  padding: 15px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-label {
+  width: 100%;
+  font-size: 16px;
+}
+
+.input-text {
+  width: 100%;
+  padding: 7px 5px;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 3px;
+  border:1px solid $primary-gray;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.textarea {
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 3px;
+  padding: 7px 5px;
+  border:1px solid $primary-gray;
+  resize: none;
+
+  &:focus {
+    outline: none;
+  }
+}
