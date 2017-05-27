@@ -49,17 +49,20 @@ class BenefitController extends Controller
 
     public function redeem(Request $request)
     {   
-        $user_id = $request->get('user_id');
+        $user = Auth::user();
         $benefit_id = $request->get('benefit_id');
 
-        $user = User::find($user_id);
         $benefit = Benefit::find($benefit_id);
 
-        if ($user->points < $benefit->points) {
-            return null;
+        if (!$user || !$benefit || ($user->points < $benefit->points)) {
+            return response()->json();
         }
 
-        $client_benefit = ClientsBenefits::create(request()->all());
+        $request = request()->all();
+
+        $request['user_id'] = $user->id;
+
+        $client_benefit = ClientsBenefits::create($request);
         $code = hash('crc32b', $client_benefit->id . $client_benefit->user_id . $client_benefit->benefit_id);
 
         $qr = new QrCode($code);
@@ -76,10 +79,6 @@ class BenefitController extends Controller
         $client_benefit->code = $code;
         $client_benefit->qr_file = url('/').$qr_file;
         $client_benefit->save();
-
-        $user = $client_benefit->user;
-
-        $benefit = $client_benefit->benefit;
 
         $user->points = $user->points - $benefit->points;
 
