@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/landing', ['as' => 'landing', function () {
+    return view('landing.landing');
+}]);
+
 Route::get('/', ['as' => 'home', function () {
     return view('pages.home.home');
 }]);

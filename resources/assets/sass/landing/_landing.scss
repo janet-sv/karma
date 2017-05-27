@@ -1,0 +1,48 @@
+.landing-section {
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  padding: 40px;
+
+  &.is-blue {
+    background: $primary-blue;
+  }
+}
+
+.landing-section-element {
+  width: 400px;
+}
+
+.landing-section-logo-wrapper {
+  padding: 20px;
+  background: $white;
+  box-shadow: 2px 2px 2px $gray-light;
+  width: 380px;
+  height: 380px;
+  border-radius: 380px;
+  position: relative;
+}
+
+.landing-section-logo {
+  @extend %absolute-vertical-align;
+}
+
+.landing-section-name-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.landing-section-welcome-text {
+  color: $white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.landing-section-button-wrapper {
+  text-align: center;
+}
+
+.landing-section-button {
+  @extend %button;
+  box-shadow: 1px 1px 0px $gray-light;
+}
